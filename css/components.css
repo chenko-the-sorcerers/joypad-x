@@ -1,0 +1,692 @@
+/* ─── PRICING V2 (CARDS & FILTERS) ─────────────────────────────────── */
+.pricing-section {
+  background: var(--dark-2);
+  border-top: 1px solid rgba(69, 243, 255, 0.05); /* Aksen neon tipis di atas */
+}
+
+.section-header-centered {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+/* Sort / Filter Buttons */
+.filter-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.6rem 1.5rem;
+  border-radius: 5px; /* Dibuat sedikit kotak */
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--muted);
+  font-family: var(--font-display); /* Font Orbitron */
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.filter-btn:hover {
+  background: rgba(69, 243, 255, 0.1);
+  color: var(--neon-blue);
+  border-color: rgba(69, 243, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: var(--neon-blue);
+  color: var(--dark);
+  border-color: var(--neon-blue);
+  box-shadow: 0 4px 15px rgba(69, 243, 255, 0.3);
+}
+
+/* Pricing Grid - Optimized for Individual Cards */
+.pricing-grid-v2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+/* Individual Card Styling */
+.pricing-card-v2 {
+  background: var(--dark-3);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius-sm); /* Sudut lebih tajam */
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.pricing-card-v2:hover {
+  transform: translateY(-5px);
+  border-color: var(--neon-blue);
+  box-shadow: 0 10px 30px rgba(69, 243, 255, 0.15); /* Glow shadow biru */
+}
+
+.p-card-header {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.p-card-icon { 
+  font-size: 1.5rem; 
+  background: rgba(69, 243, 255, 0.1);
+  color: var(--neon-blue);
+  padding: 0.5rem;
+  border-radius: var(--radius-sm);
+}
+
+.p-category-tag {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.p-card-title h3 { 
+  font-size: 1.25rem; 
+  color: var(--white); 
+  font-family: var(--font-heading);
+  line-height: 1.2;
+}
+
+.p-card-body { 
+  flex-grow: 1; 
+  margin-bottom: 1.5rem;
+}
+
+.p-main-info {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.p-price {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--neon-blue); /* Harga jadi biru neon */
+  font-family: var(--font-display);
+}
+
+.p-unit {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.p-note-box {
+  background: rgba(255,255,255,0.03);
+  padding: 0.85rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  color: var(--off-white);
+  line-height: 1.5;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.p-note-box span { color: var(--neon-blue); } /* Ikon info jadi biru */
+
+.p-card-footer {
+  margin-top: auto;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.footer-tag { 
+  font-size: 0.6rem; 
+  font-weight: 800; 
+  color: var(--muted); 
+  text-transform: uppercase; 
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.p-card-footer p { 
+  font-size: 0.75rem; 
+  color: rgba(255,255,255,0.4); 
+  line-height: 1.5; 
+}
+
+.p-card-action { margin-top: 1.5rem; }
+
+/* ─── BOOKING ─────────────────────────────────────────────────────────────────── */
+.booking-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.booking-note {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.75;
+  margin: 1rem 0 2rem;
+}
+
+.booking-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.booking-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.6);
+}
+
+.booking-form-wrap {
+  background: var(--dark-3);
+  border: 1px solid rgba(69, 243, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.booking-form { display: flex; flex-direction: column; gap: 1.25rem; }
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.form-label {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.form-input {
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  color: var(--white);
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--neon-blue);
+  background: rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(69, 243, 255, 0.2);
+}
+
+.btn-wa {
+  background: #25D366; /* Warna WA tetap hijau standar internasional */
+  color: var(--white);
+}
+
+/* ─── CTA SECTION ─────────────────────────────────────────────────────────────── */
+.cta-wrapper {
+  position: relative;
+  text-align: center;
+  padding: 6rem 2rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(69, 243, 255, 0.15);
+  background: var(--dark-3);
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+.cta-headline {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 6vw, 4rem);
+  color: var(--white);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.cta-sub {
+  font-size: 1.1rem;
+  color: var(--muted);
+  max-width: 500px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+/* ─── INSTAGRAM GRID ORIGINAL ────────────────────────────────────────── */
+.ig-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.ig-embed-wrap {
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--dark-2);
+  border: 1px solid rgba(255,255,255,0.06);
+  min-height: 450px; 
+  transition: var(--transition);
+}
+
+.ig-embed-wrap:hover {
+  border-color: rgba(69, 243, 255, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(69, 243, 255, 0.2);
+}
+
+.ig-embed-wrap .instagram-media {
+  min-width: 100% !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* ─── LOCATION ────────────────────────────────────────────────────────────── */
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3rem;
+}
+
+.location-card {
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  background: var(--dark-3);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+}
+
+.map-wrap {
+  height: 100%;
+  min-height: 450px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(69, 243, 255, 0.2);
+}
+
+/* ─── RESPONSIVE ──────────────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .ig-grid { grid-template-columns: repeat(2, 1fr); }
+  .location-grid { grid-template-columns: 1fr; }
+  .map-wrap { min-height: 350px; }
+}
+
+@media (max-width: 768px) {
+  .booking-wrapper { grid-template-columns: 1fr; gap: 3rem; }
+  .form-row { grid-template-columns: 1fr; }
+  .pricing-grid-v2 { grid-template-columns: 1fr; }
+}
+
+/* ─── 1. BOOKING MULTI-SELECT GRID ───────────────────────────────────── */
+.services-selection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); 
+  gap: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  max-height: 250px; 
+  overflow-y: auto;  
+  margin-top: 8px;
+}
+
+.service-check-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.service-check-item:hover {
+  background: rgba(69, 243, 255, 0.08);
+  color: #fff;
+}
+
+/* Checkbox Custom Style */
+.custom-check {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--neon-blue); /* Centang warna biru neon */
+  cursor: pointer;
+}
+
+.check-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  user-select: none;
+}
+
+/* ─── 2. TRACKING STATUS BOX ─────────────────────────────────────────── */
+.track-status-box {
+  transition: transform 0.3s ease;
+}
+
+.track-status-box:hover {
+  border-color: rgba(69, 243, 255, 0.4) !important;
+}
+
+#track-result {
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── 3. RECEIPT / STRUK STYLE ───────────────────────────────────────── */
+#receipt-box {
+  background: #ffffff;
+  color: #000000;
+  padding: 1.5rem;
+  font-family: 'Courier New', Courier, monospace; 
+  font-weight: 900;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  border-radius: 8px;
+  display: inline-block;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+.status-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-weight: 700;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+/* ─── BOOKING SYSTEM WRAPPER ────────────────────────────────────────── */
+.booking-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+@media (max-width: 992px) {
+  .booking-wrapper { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+/* ─── TRACKING BOX (CEK STATUS) ─────────────────────────────────────── */
+.track-status-box {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 2rem;
+}
+
+.track-status-box .form-input {
+  background: #000 !important;
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #fff;
+  height: 45px;
+}
+
+/* ─── MULTI-SELECT SERVICES (CHECKBOX GRID) ─────────────────────────── */
+.services-selection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-height: 280px;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+.services-selection-grid::-webkit-scrollbar { width: 5px; }
+.services-selection-grid::-webkit-scrollbar-thumb { background: rgba(69,243,255,0.2); border-radius: 10px; }
+
+.service-check-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.service-check-item:hover {
+  background: rgba(69, 243, 255, 0.08);
+  border-color: rgba(69, 243, 255, 0.2);
+}
+
+/* Highlight saat dicentang (Neon Blue) */
+.service-check-item:has(input:checked) {
+  background: rgba(69, 243, 255, 0.1);
+  border-color: var(--neon-blue);
+  box-shadow: 0 0 15px rgba(69,243,255,0.15);
+}
+
+.custom-check {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--neon-blue);
+  cursor: pointer;
+}
+
+.check-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+}
+
+.service-check-item:has(input:checked) .check-label {
+  color: #fff;
+}
+
+/* ─── RECEIPT / STRUK STYLE (SUCCESS UI) ────────────────────────────── */
+#success-ui {
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#receipt-box {
+  background: #fff;
+  color: #000;
+  padding: 2rem 1rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 900;
+  font-size: 2.2rem;
+  letter-spacing: 4px;
+  border-radius: 4px;
+  margin: 1.5rem 0;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+#receipt-box::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background-image: linear-gradient(135deg, #fff 25%, transparent 25%), 
+                    linear-gradient(-135deg, #fff 25%, transparent 25%);
+  background-size: 15px 20px;
+}
+
+.btn-wa {
+  background: #25D366;
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.btn-wa:hover {
+  background: #1eb954;
+  transform: translateY(-2px);
+}
+
+/* LAYOUT BOOKING DUA KOLOM (YCB STYLE) */
+.ycb-wrapper {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  background: var(--dark-3); /* Pakai warna dasar JoyPad */
+  border: 1px solid rgba(69, 243, 255, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  margin-top: 2rem;
+}
+
+.ycb-left {
+  background: var(--dark-2);
+  padding: 2.5rem 2rem;
+  border-right: 1px solid rgba(255,255,255,0.05);
+}
+
+.ycb-right {
+  padding: 2.5rem 3rem;
+}
+
+.ycb-avatar {
+  width: 70px; height: 70px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 20px rgba(69, 243, 255, 0.2);
+}
+
+.ycb-summary-card {
+  margin-top: 2rem;
+  background: rgba(255,255,255,0.02);
+  border-radius: 12px;
+  border: 1px solid rgba(69, 243, 255, 0.1);
+}
+
+.ycb-summary-row {
+  padding: 1.2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  display: flex; gap: 15px; align-items: flex-start;
+}
+.ycb-summary-row:last-child { border-bottom: none; }
+.ycb-icon { font-size: 1.3rem; opacity: 0.8; color: var(--neon-blue); }
+
+.track-status-box {
+  background: rgba(255,255,255,0.03);
+  padding: 1.2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  margin-top: 1rem;
+  max-width: 500px;
+}
+
+.check-grid {
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 12px;
+  background: rgba(0,0,0,0.2);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+@media (max-width: 992px) {
+  .ycb-wrapper { grid-template-columns: 1fr; }
+  .ycb-left { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .ycb-right { padding: 2rem; }
+}
+
+/* Efek Flash Screen ala Gaming */
+.camera-flash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(69, 243, 255, 0.8); /* Warna flash kebiruan */
+  opacity: 0;
+  z-index: 10000;
+  pointer-events: none; 
+}
+
+.flash-active {
+  animation: flash-animation 0.15s ease-out;
+}
+
+@keyframes flash-animation {
+  0% { opacity: 0.9; }
+  100% { opacity: 0; }
+}
+
+/* ─── TOAST NOTIFICATION ─── */
+.booking-toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px); 
+  background: var(--neon-blue); /* Warna diubah jadi biru neon */
+  color: var(--dark);
+  padding: 12px 24px;
+  border-radius: 5px; /* Kotak ala gaming */
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 1px;
+  z-index: 1000000;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  box-shadow: 0 10px 40px rgba(69, 243, 255, 0.4); /* Glow cyan */
+  white-space: nowrap;
+  opacity: 0;
+  font-family: var(--font-display);
+}
+
+.booking-toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+.booking-toast i {
+  font-size: 20px;
+  animation: pulse-scan 0.8s infinite;
+}
+
+@keyframes pulse-scan {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
+}

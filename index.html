@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JoyPad X Jogja - Sewa PS3 & PS4</title>
+        
+        <!-- Icon di Tab Browser (Favicon) -->
+        <link rel="icon" type="image/png" href="logo.png">
+        <link rel="apple-touch-icon" href="logo.png">
+      
+        <!-- Meta Description -->
+        <meta name="description" content="Sewa PlayStation 3 dan PlayStation 4 harian di Yogyakarta. Layanan antar langsung ke rumah. Level up your weekend bersama JoyPad X!" />
+        <meta name="keywords" content="sewa ps jogja, rental ps3 jogja, rental ps4 jogja, sewa playstation yogyakarta, joypad x jogja, rental ps antar jemput" />
+        
+        <!-- Open Graph / Facebook / WhatsApp (Thumbnail Share) -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://joypadx-jogja.vercel.app" /> <!-- Ganti dengan domainmu nanti -->
+        <meta property="og:title" content="JoyPad X Jogja - Sewa PS3 & PS4" />
+        <meta property="og:description" content="Sewa PS3 & PS4 harian di Jogja dengan layanan antar ke rumah. Pesan sekarang!" />
+        <meta property="og:image" content="logo.png" /> <!-- Ini yang jadi thumbnail -->
+      
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:title" content="JoyPad X Jogja - Sewa PS3 & PS4" />
+        <meta property="twitter:description" content="Sewa PS3 & PS4 harian di Jogja dengan layanan antar ke rumah. Pesan sekarang!" />
+        <meta property="twitter:image" content="logo.png" />
+      
+        <script async src="//www.instagram.com/embed.js"></script>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+      
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/hero.css" />
+        <link rel="stylesheet" href="css/sections.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/responsive.css" />
+      </head>
+<body>
+
+  <div id="header-root"></div>
+  
+  <!-- Flash effect bisa dimatikan atau diganti warnanya nanti di CSS agar cocok dengan tema gaming -->
+  <div id="shutter-flash" class="camera-flash"></div>
+  
+  <!-- Toast Notifikasi (Disesuaikan pesannya) -->
+  <div id="booking-toast" class="booking-toast">
+    <i class='bx bx-joystick'></i> <span>DATA SAVED! PREPARING WHATSAPP...</span>
+  </div>
+
+  <main>
+    <div id="hero-root"></div>
+    <div id="services-root"></div> <!-- Nanti bisa dipakai untuk Info Harga / Pricelist -->
+    <div id="why-us-root"></div> <!-- Alasan memilih JoyPad X -->
+    <div id="portfolio-root"></div> <!-- Nanti bisa dipakai untuk Galeri Pelanggan -->
+    <div id="pricing-root"></div> <!-- Detail Pricelist -->
+    <div id="location-root"></div>
+    <div id="booking-root"></div>
+    <div id="cta-root"></div>
+  </main>
+
+  <div id="footer-root"></div>
+
+  <!-- Data -->
+  <script src="js/data.js"></script>
+
+  <!-- Components -->
+  <script src="components/header.js"></script>
+  <script src="components/hero.js"></script>
+  <script src="components/sections.js"></script>
+  <script src="components/content.js"></script>
+  <script src="components/footer.js"></script>
+
+  <!-- App -->
+  <script src="js/app.js"></script>
+
+  <!-- <script>
+    // Matikan Klik Kanan
+    document.addEventListener('contextmenu', event => event.preventDefault());
+  
+    // Matikan Shortcut (F12, Ctrl+Shift+I, Ctrl+U untuk View Source)
+    document.onkeydown = function(e) {
+      if (e.keyCode == 123 || 
+         (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) || 
+         (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) || 
+         (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) || 
+         (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0))) {
+        return false;
+      }
+    };
+  </script> -->
+  
+</body>
+</html>

@@ -1,0 +1,421 @@
+/* ═══════════════════════════════════════════════════════════════════
+   RESPONSIVE.CSS — Perbaikan responsif saja, tidak ada perubahan konten
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ─── HAMBURGER & OVERLAY: HIDDEN ON DESKTOP ────────────────────────────── */
+.hamburger {
+    display: none;
+  }
+  
+  .nav-overlay {
+    display: none;
+  }
+  
+  .nav-mobile {
+    display: none;
+  }
+  
+  /* ─── LOGO IMAGE ─────────────────────────────────────────────────────────── */
+  .logo-img {
+      height: 38px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+    }
+    
+    .logo {
+      gap: 0; /* logo gambar sudah include teks */
+    }
+    
+    .logo-mark,
+    .logo-text {
+      display: none; /* ganti dengan logo gambar */
+    }
+    
+    /* ─── BASE OVERFLOW FIX ──────────────────────────────────────────────────── */
+    html, body {
+      overflow-x: hidden;
+      max-width: 100%;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    /* ─── HERO — MOBILE ──────────────────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .hero-inner {
+        padding-top: 7rem;
+        padding-bottom: 3rem;
+      }
+    
+      .hero-headline {
+        font-size: clamp(3rem, 14vw, 5rem);
+      }
+    
+      .hero-sub {
+        font-size: 0.9rem;
+      }
+    
+      .hero-cta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+      }
+    
+      .hero-cta .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    
+      .hero-stats {
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+    
+      .stat-num { font-size: 1.5rem; }
+    
+      .hero-scroll { display: none; }
+    }
+    
+    /* ─── HEADER — MOBILE ────────────────────────────────────────────────────── */
+    @media (max-width: 992px) {
+      .header-inner {
+        padding: 0 1.25rem;
+      }
+    
+      /* Logo size on mobile */
+      .logo-img {
+        height: 32px;
+      }
+    
+      /* Hamburger visible */
+      .hamburger {
+        display: flex !important;
+        margin-left: auto;
+      }
+    
+      /* Desktop nav hidden */
+      .nav-desktop {
+        display: none !important;
+      }
+    
+      /* Hide "Book Now" button in header on mobile */
+      .hide-mobile {
+        display: none !important;
+      }
+    
+      /* Nav mobile sidebar */
+      .nav-mobile {
+        position: fixed !important;
+        display: flex !important;
+        top: 0;
+        right: -100%;
+        width: min(280px, 80vw);
+        height: 100dvh;
+        background: #0a0a0a;
+        z-index: 9998 !important;
+        flex-direction: column;
+        padding: 5rem 2rem 2rem;
+        gap: 0.5rem;
+        box-shadow: -10px 0 40px rgba(0, 0, 0, 0.6);
+        transition: right 0.4s cubic-bezier(0.77, 0.2, 0.05, 1);
+        border-left: 1px solid rgba(255, 255, 255, 0.08);
+        pointer-events: all !important;
+        overflow-y: auto;
+      }
+    
+      .nav-mobile.active {
+        right: 0 !important;
+      }
+    
+      .nav-mobile .nav-link {
+        font-family: var(--font-heading);
+        font-size: 1rem;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.7) !important;
+        padding: 0.85rem 1rem !important;
+        border-radius: 8px;
+        display: block;
+        width: 100%;
+        transition: all 0.2s ease;
+        letter-spacing: 0.05em;
+      }
+    
+      .nav-mobile .nav-link:hover {
+        color: #fff !important;
+        background: rgba(255, 255, 255, 0.07);
+        padding-left: 1.5rem !important;
+      }
+    
+      .nav-mobile .btn {
+        width: 100%;
+        justify-content: center;
+        margin-top: 1rem;
+      }
+    
+      /* Overlay */
+      .nav-overlay {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.65);
+        backdrop-filter: blur(4px);
+        z-index: 9997;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+      }
+    
+      .nav-overlay.show {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+    
+    /* ─── SERVICES GRID ──────────────────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 520px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+    
+      .service-card {
+        padding: 1.5rem;
+      }
+    }
+    
+    /* ─── WHY US GRID ────────────────────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    /* ─── INSTAGRAM / PORTFOLIO GRID ─────────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .ig-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 560px) {
+      .ig-grid {
+        grid-template-columns: 1fr;
+      }
+    
+      .ig-embed-wrap {
+        min-height: 380px;
+      }
+    }
+    
+    /* ─── SECTION HEADER ROW (Portfolio heading + IG button) ─────────────────── */
+    @media (max-width: 600px) {
+      .section-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+    
+      .ig-btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+    
+    /* ─── PRICING ────────────────────────────────────────────────────────────── */
+    @media (max-width: 1100px) {
+      /* Pricing layout: collapse sidebar to top tabs */
+      .pricing-layout {
+        grid-template-columns: 1fr;
+      }
+    
+      .pricing-tabs-col .pricing-tabs {
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: static;
+        gap: 0.5rem;
+      }
+    
+      .pricing-tab {
+        width: auto;
+        flex: 0 1 auto;
+      }
+    
+      .pricing-panel-body {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    
+    @media (max-width: 680px) {
+      .pricing-panel-body {
+        grid-template-columns: 1fr;
+      }
+    
+      .pricing-includes-list {
+        grid-template-columns: 1fr;
+      }
+    
+      .pricing-panel {
+        padding: 0;
+      }
+    }
+    
+    /* Pricing cards (pricing-grid-v2) */
+    @media (max-width: 768px) {
+      .pricing-grid-v2 {
+        grid-template-columns: 1fr;
+      }
+    
+      .filter-container {
+        gap: 0.5rem;
+      }
+    
+      .filter-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+      }
+    }
+    
+    /* ─── LOCATION ────────────────────────────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .location-grid {
+        grid-template-columns: 1fr;
+      }
+    
+      .map-wrap {
+        min-height: 320px;
+        height: 320px;
+      }
+    }
+    
+    @media (max-width: 600px) {
+      .location-card {
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 1.25rem;
+      }
+    
+      .location-btns {
+        flex-direction: column;
+      }
+    
+      .location-btns .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    
+      .map-wrap {
+        min-height: 260px;
+        height: 260px;
+      }
+    }
+    
+    /* ─── BOOKING ─────────────────────────────────────────────────────────────── */
+    @media (max-width: 992px) {
+      .booking-wrapper,
+      .ycb-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    
+      .ycb-left {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      }
+    
+      .ycb-right {
+        padding: 2rem;
+      }
+    }
+    
+    @media (max-width: 600px) {
+      .booking-form-wrap {
+        padding: 1.5rem;
+      }
+    
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    
+      .check-grid {
+        grid-template-columns: 1fr;
+      }
+    
+      .services-selection-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    /* ─── CTA SECTION ─────────────────────────────────────────────────────────── */
+    @media (max-width: 600px) {
+      .cta-wrapper {
+        padding: 3rem 1.25rem;
+      }
+    
+      .cta-headline {
+        font-size: clamp(1.75rem, 8vw, 3rem);
+      }
+    
+      .cta-sub {
+        font-size: 0.9rem;
+      }
+    
+      .cta-wrapper .btn-lg {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+    
+    /* ─── FOOTER ─────────────────────────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    
+      .footer-bottom {
+        flex-direction: column;
+        gap: 0.4rem;
+        text-align: center;
+        font-size: 0.75rem;
+      }
+    }
+    
+    /* ─── SECTION GENERAL ────────────────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .section-gap {
+        padding: clamp(2.5rem, 8vw, 4rem) 0;
+      }
+    
+      .section-title {
+        font-size: clamp(2rem, 8vw, 3rem);
+      }
+    
+      .section-header {
+        margin-bottom: 2rem;
+      }
+    
+      .container {
+        padding: 0 1rem;
+      }
+    }
+    
+    /* ─── BUTTONS ─────────────────────────────────────────────────────────────── */
+    @media (max-width: 400px) {
+      .btn {
+        padding: 0.65rem 1.25rem;
+        font-size: 0.85rem;
+      }
+    }
