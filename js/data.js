@@ -97,9 +97,9 @@ window.SiteData = {
 
   // Bisa diisi ID Reel/Post IG JoyPad X Jogja nantinya (ini format dummy dari template)
   featuredPosts: [
-    { id: "DVIaTKTExj_", url: "https://www.instagram.com/p/DVIaTKTExj_/", type: "post" },
-    { id: "DUQam4Zk0wZ", url: "https://www.instagram.com/reel/DUQam4Zk0wZ/", type: "reel" },
-    { id: "DTiDo-xE8CB", url: "https://www.instagram.com/reel/DTiDo-xE8CB/", type: "reel" },
+    { id: "DVIaTKTExj_", url: "https://www.instagram.com/p/DMLdft3hCxS/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==", type: "post" },
+    { id: "DUQam4Zk0wZ", url: "https://www.instagram.com/p/DMLc-zCBt5D/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==", type: "post" },
+    { id: "DTiDo-xE8CB", url: "https://www.instagram.com/reel/DPdePnqCTyU/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==", type: "reel" },
   ],
 
   pricing: [
